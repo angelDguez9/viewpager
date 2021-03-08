@@ -11,8 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewp.adapter = ViewPageAdapter(supportFragmentManager
-        )
+        viewp.adapter = ViewPageAdapter(supportFragmentManager)
 
     }
 }
