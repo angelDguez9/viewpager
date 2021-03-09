@@ -3,29 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/firts">
-
+    app:startDestination="@id/splash">
     <fragment
-        android:id="@+id/firts"
-        android:name="com.example.viewpager.onboarding.firts"
-        android:label="fragment_firts"
-        tools:layout="@layout/fragment_firts" >
+        android:id="@+id/viewpagerFragment2"
+        android:name="com.example.viewpager.onboarding.viewpagerFragment"
+        android:label="fragment_viewpager"
+        tools:layout="@layout/fragment_viewpager" >
         <action
-            android:id="@+id/action_firts_to_second"
-            app:destination="@id/second" />
+            android:id="@+id/action_viewpagerFragment2_to_eventFragment"
+            app:destination="@id/eventFragment" />
     </fragment>
     <fragment
-        android:id="@+id/second"
-        android:name="com.example.viewpager.onboarding.second"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" >
-        <action
-            android:id="@+id/action_second_to_tercero"
-            app:destination="@id/tercero" />
-    </fragment>
+        android:id="@+id/eventFragment"
+        android:name="com.example.viewpager.onboarding.eventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" />
     <fragment
-        android:id="@+id/tercero"
-        android:name="com.example.viewpager.onboarding.tercero"
-        android:label="fragment_tercero"
-        tools:layout="@layout/fragment_tercero" />
+        android:id="@+id/splash"
+        android:name="com.example.viewpager.onboarding.splash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splash_to_viewpagerFragment2"
+            app:destination="@id/viewpagerFragment2" />
+        <action
+            android:id="@+id/action_splash_to_eventFragment"
+            app:destination="@id/eventFragment" />
+    </fragment>
 </navigation>
